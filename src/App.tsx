@@ -1,5 +1,7 @@
+import { styles } from "./styles"
+
 function App() {
-  return <div className="App"></div>
+  return <div className={styles.container}>Hello World</div>
 }
 
 export default App
