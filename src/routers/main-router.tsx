@@ -31,47 +31,44 @@ const NoAuthRoute: React.FunctionComponent<PropsWithChildren> = ({
   return <>{children}</>
 }
 
-export const mainRouter = createBrowserRouter(
-  [
-    {
-      path: "/",
-      element: (
-        <ProtectedRoute>
-          <Suspense fallback="loading...">
-            <Layout />
-          </Suspense>
-        </ProtectedRoute>
-      ),
-      errorElement: <ErrorPage />,
-      children: [
-        {
-          path: "/",
-          element: <HomePage />,
-        },
-        //   {
-        //     path: "contacts/:contactId",
-        //     element: <ContactPage />,
-        //   },
-      ],
-    },
-    {
-      path: "/login",
-      element: (
-        <NoAuthRoute>
-          <Suspense fallback="loading...">
-            <LoginLayout />
-          </Suspense>
-        </NoAuthRoute>
-      ),
-      children: [
-        {
-          path: "/login",
-          element: <LoginPage />,
-        },
-      ],
-    },
-  ],
+// TODO: we use hash for gh-pages only
+// it does not support spa
+export const mainRouter = createBrowserRouter([
   {
-    basename: "/planner/",
-  }
-)
+    path: "/",
+    element: (
+      <ProtectedRoute>
+        <Suspense fallback="loading...">
+          <Layout />
+        </Suspense>
+      </ProtectedRoute>
+    ),
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/",
+        element: <HomePage />,
+      },
+      {
+        path: "contacts/:contactId",
+        element: <div>contacts123</div>,
+      },
+    ],
+  },
+  {
+    path: "/login",
+    element: (
+      <NoAuthRoute>
+        <Suspense fallback="loading...">
+          <LoginLayout />
+        </Suspense>
+      </NoAuthRoute>
+    ),
+    children: [
+      {
+        path: "/login",
+        element: <LoginPage />,
+      },
+    ],
+  },
+])
