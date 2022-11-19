@@ -1,7 +1,10 @@
-import { css } from '@emotion/css'
+import { Breakpoints } from './enums/breakpoints';
+import { injectGlobal } from '@emotion/css'
 
-export const styles = {
-  container: css`
-    color: red;
-  `,
-}
+injectGlobal`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+`
