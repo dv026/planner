@@ -1,0 +1,1 @@
+import{j as u}from"./index.0f5b6f55.js";const e=()=>u("div",{children:"\u0422\u0430\u043A\u043E\u0439 \u0441\u0442\u0430\u0440\u043D\u0438\u0446\u044B \u043D\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442"});export{e as default};
