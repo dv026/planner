@@ -57,5 +57,5 @@ export const styles = {
     @media (max-width: ${Breakpoints.Tablet + 'px'}) {
       height: 80px;
     }
-  `
+  `,
 }
