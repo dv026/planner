@@ -16,5 +16,9 @@ export const styles = {
 
     ${boxShadowAroundGreyMixin}
     ${adaptiveComponentFontSize}
+
+    &:disabled {
+      background-color: grey;
+    }
   `,
 }

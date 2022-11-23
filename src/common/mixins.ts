@@ -50,3 +50,23 @@ export const adaptiveComponentFontSize = css`
     font-size: 16px;
   }
 `
+
+export const adaptiveComponentFontSizeSmall = css`
+  font-size: 22px;
+
+  @media (max-width: ${Breakpoints.Desktop + 'px'}) {
+      font-size: 18px;
+  }
+
+  @media (max-width: ${Breakpoints.Laptop + 'px'}) {
+    font-size: 16px;
+  }
+
+  @media (max-width: ${Breakpoints.Tablet + 'px'}) {
+    font-size: 12px;
+  }
+
+  @media (max-width: ${Breakpoints.Mobile + 'px'}) {
+    font-size: 12px;
+  }
+`

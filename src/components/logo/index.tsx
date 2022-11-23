@@ -23,7 +23,7 @@ export const Logo: React.FC<LogoProps> = ({ className }) => {
   return (
     <div className={className}>
       <LogoIcon height={width} />
-      <div className={styles.name}>PLANNER.IO</div>
+      <div className={styles.name}>PLANNER</div>
     </div>
   )
 }

@@ -1,7 +1,7 @@
+import { css } from '@emotion/css';
+
 import { adaptiveComponentFontSize } from './../../common/mixins';
 import { themeBlueColor, lightgreyColor, lightgreyTextColor } from './../../common/colors';
-import { css } from '@emotion/css';
-import { Breakpoints } from '../../enums/breakpoints';
 
 export const styles = {
   input: css`
